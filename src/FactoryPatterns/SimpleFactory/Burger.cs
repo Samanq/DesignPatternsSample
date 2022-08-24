@@ -2,7 +2,7 @@
 
 public class Burger : IFood
 {
-    public int Calories { get; } = 295;
+    public double Price { get; } = 7.8;
 
     public void Prepare()
     {
@@ -11,6 +11,6 @@ public class Burger : IFood
 
     public void Serve()
     {
-        Console.WriteLine("The burger served in a stone plate with fries.");
+        Console.WriteLine("The burger served in a stone plate with fries.\n");
     }
 }

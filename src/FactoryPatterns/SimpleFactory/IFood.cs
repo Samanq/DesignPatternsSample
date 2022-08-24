@@ -2,7 +2,7 @@
 {
     public interface IFood
     {
-        public int Calories { get; }
+        public double Price { get; }
         public void Prepare();
         public void Serve();
     }

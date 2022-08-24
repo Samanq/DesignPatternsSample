@@ -16,7 +16,9 @@ public static class FoodFactory
             case "soup":
                 return new Soup();
             default:
-                Console.WriteLine("Unknown title...");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Error in taking order: Unknown title...\n");
+                Console.ResetColor();
                 return null;
         }
     }

@@ -2,7 +2,7 @@
 
 public class Soup : IFood
 {
-    public int Calories { get; } = 69;
+    public double Price { get; } = 4.55;
 
     public void Prepare()
     {
@@ -11,6 +11,6 @@ public class Soup : IFood
 
     public void Serve()
     {
-        Console.WriteLine("The Soup served in a white bowl.");
+        Console.WriteLine("The Soup served in a white bowl.\n");
     }
 }

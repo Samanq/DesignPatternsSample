@@ -2,7 +2,7 @@
 
 public class IceCream : IFood
 {
-    public int Calories { get; } = 207;
+    public double Price { get; } = 3.25;
 
     public void Prepare()
     {
@@ -11,6 +11,6 @@ public class IceCream : IFood
 
     public void Serve()
     {
-        Console.WriteLine("The Ice cream serverd in a cone.");
+        Console.WriteLine("The Ice cream serverd in a cone.\n");
     }
 }

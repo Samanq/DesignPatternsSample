@@ -1,12 +1,15 @@
 ﻿// This a a client of the factory.
 using SimpleFactory;
 
+var totalPrice = 0.0;
 
 var soup = FoodFactory.GetFood("soup");
 if (soup != null)
 {
     soup.Prepare();
     soup.Serve();
+
+    totalPrice += soup.Price;
 }
 
 var burger = FoodFactory.GetFood("burger");
@@ -14,6 +17,8 @@ if (burger != null)
 {
     burger.Prepare();
     burger.Serve();
+
+    totalPrice += burger.Price;
 }
 
 var iceCream = FoodFactory.GetFood("ice cream");
@@ -21,9 +26,10 @@ if (iceCream != null)
 {
     iceCream.Prepare();
     iceCream.Serve();
+
+    totalPrice += iceCream.Price;
 }
 
-Console.WriteLine($"Soup calories: {soup.Calories}");
-Console.WriteLine($"Burger calories: {burger.Calories}");
-Console.WriteLine($"Ice cream calories: {iceCream.Calories}");
-Console.WriteLine($"The whole calories is: {soup.Calories + burger.Calories + iceCream.Calories}");
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine($"The total price is: ${totalPrice}");
+Console.ResetColor();
